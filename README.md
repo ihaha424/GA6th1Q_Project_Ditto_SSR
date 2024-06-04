@@ -8,8 +8,10 @@
 ```
 asdasf
 ```
+## 내가 한 일
+![image](https://github.com/ihaha424/GA6th1Q_Project_Ditto_SSR/assets/70957529/7d5139da-9028-40ae-8331-968b0fbadeb3)
 
-
+---
 
 ---
 # SVN Commit Status
