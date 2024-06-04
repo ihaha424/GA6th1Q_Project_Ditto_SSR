@@ -26,6 +26,8 @@ asdasf
 -Yun Dong Hyun
 
 
+## Log
+![image](https://github.com/ihaha424/GA6th1Q_Project_Ditto_SSR/assets/70957529/0b9f104d-cb44-4f70-bbf2-316ad38d76e4)
 ## Statistics
 ![image](https://github.com/ihaha424/GA6th1Q_Project_Ditto_SSR/assets/70957529/7177ebe6-5df6-4f20-9a4f-d4ddda705cfc)
 ## Commits by data
