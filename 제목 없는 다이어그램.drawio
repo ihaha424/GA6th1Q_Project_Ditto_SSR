@@ -1,10 +1,266 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.9">
-  <diagram name="페이지-1" id="yhR_EF2e5dhMDeMqDX9H">
-    <mxGraphModel>
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- 스타일 정의 -->
+  <defs>
+    <style>
+      .scene-box { fill: #e8f4fd; stroke: #1e88e5; stroke-width: 2; }
+      .player-box { fill: #e8f5e9; stroke: #43a047; stroke-width: 2; }
+      .enemy-box { fill: #ffebee; stroke: #e53935; stroke-width: 2; }
+      .weapon-box { fill: #fff3e0; stroke: #fb8c00; stroke-width: 2; }
+      .ui-box { fill: #f3e5f5; stroke: #8e24aa; stroke-width: 2; }
+      .script-box { fill: #fafafa; stroke: #616161; stroke-width: 1; }
+      .title { font-size: 14px; font-weight: bold; fill: #212121; }
+      .subtitle { font-size: 12px; font-weight: bold; fill: #424242; }
+      .text { font-size: 11px; fill: #616161; }
+      .arrow { stroke: #616161; stroke-width: 2; fill: none; }
+      .arrow-dashed { stroke: #9e9e9e; stroke-width: 1.5; fill: none; stroke-dasharray: 5,5; }
+      .group-box { fill: none; stroke: #bdbdbd; stroke-width: 2; stroke-dasharray: 10,5; }
+      .group-title { font-size: 16px; font-weight: bold; fill: #424242; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#616161"/>
+    </marker>
+  </defs>
+
+  <!-- Scene Layer Group -->
+  <rect class="group-box" x="20" y="20" width="1560" height="280" rx="10"/>
+  <text class="group-title" x="40" y="45">Scene Layer (씬 레이어)</text>
+  
+  <!-- Menu Scenes -->
+  <rect class="scene-box" x="50" y="70" width="150" height="200" rx="5"/>
+  <text class="subtitle" x="125" y="90" text-anchor="middle">Menu Scenes</text>
+  <line x1="50" y1="100" x2="200" y2="100" stroke="#1e88e5"/>
+  <text class="text" x="60" y="120">Start_Menu</text>
+  <text class="text" x="60" y="140">MainMenuScene</text>
+  <text class="text" x="60" y="160">Tutorial_Scene</text>
+  <text class="text" x="60" y="180">Upgrade_Scene</text>
+  <text class="text" x="60" y="200">Cokpit_Script</text>
+  <text class="text" x="60" y="220">Sally_Scene</text>
+  <text class="text" x="60" y="240">Ending_Credits</text>
+
+  <!-- Story Scenes -->
+  <rect class="scene-box" x="230" y="70" width="180" height="200" rx="5"/>
+  <text class="subtitle" x="320" y="90" text-anchor="middle">Story Scenes</text>
+  <line x1="230" y1="100" x2="410" y2="100" stroke="#1e88e5"/>
+  <text class="text" x="240" y="120">Story_News_Scene</text>
+  <text class="text" x="240" y="140">Story_Briefing_Scene</text>
+  <text class="text" x="240" y="160">Middle_Story_01_Scene</text>
+  <text class="text" x="240" y="180">Middle_Story_02_Scene</text>
+  <text class="text" x="240" y="200">Ending_Story_Scene</text>
+  <text class="text" x="240" y="220">Ship_Directing_Boss_01</text>
+  <text class="text" x="240" y="240">Ship_Directing_Boss_02</text>
+  <text class="text" x="240" y="260">Ship_Directing_Boss_03</text>
+
+  <!-- Gameplay Scenes -->
+  <rect class="scene-box" x="440" y="70" width="150" height="200" rx="5"/>
+  <text class="subtitle" x="515" y="90" text-anchor="middle">Gameplay Scenes</text>
+  <line x1="440" y1="100" x2="590" y2="100" stroke="#1e88e5"/>
+  <text class="text" x="450" y="120">PrototypeScene</text>
+  <text class="text" x="450" y="140">Scene_1</text>
+  <text class="text" x="450" y="160">Boss_01_Scene</text>
+  <text class="text" x="450" y="180">Boss_02_Scene</text>
+  <text class="text" x="450" y="200">Boss_03_Scene</text>
+
+  <!-- Scene Management -->
+  <rect class="scene-box" x="620" y="70" width="200" height="120" rx="5"/>
+  <text class="subtitle" x="720" y="90" text-anchor="middle">Scene Management</text>
+  <line x1="620" y1="100" x2="820" y2="100" stroke="#1e88e5"/>
+  <text class="text" x="630" y="120">Observer (Scene Control)</text>
+  <text class="text" x="630" y="140">• m_GameFlag</text>
+  <text class="text" x="630" y="160">• Scene Transitions</text>
+  <text class="text" x="630" y="180">• FadeInFadeOut Effect</text>
+
+  <!-- GameObject Layer Group -->
+  <rect class="group-box" x="20" y="320" width="1560" height="400" rx="10"/>
+  <text class="group-title" x="40" y="345">GameObject Layer (게임 오브젝트 레이어)</text>
+
+  <!-- Player Objects -->
+  <rect class="player-box" x="50" y="370" width="200" height="320" rx="5"/>
+  <text class="subtitle" x="150" y="390" text-anchor="middle">Player System</text>
+  <line x1="50" y1="400" x2="250" y2="400" stroke="#43a047"/>
+  <text class="text" x="60" y="420">PlayerGameObject</text>
+  <text class="text" x="70" y="440">├ PlayerScript</text>
+  <text class="text" x="70" y="460">├ AnimationComponent</text>
+  <text class="text" x="70" y="480">├ ColliderComponent</text>
+  <text class="text" x="70" y="500">└ TextureComponent</text>
+  <text class="text" x="60" y="530">PlayerBulletObject</text>
+  <text class="text" x="70" y="550">└ PlayerBulletScript</text>
+  <text class="text" x="60" y="580">PlayerBuffAreaObject</text>
+  <text class="text" x="70" y="600">└ PlayerBuffAreaScript</text>
+  <text class="text" x="60" y="630">SupportingMissileObject</text>
+  <text class="text" x="70" y="650">└ SupportingMissileScript</text>
+
+  <!-- Enemy Objects -->
+  <rect class="enemy-box" x="280" y="370" width="250" height="320" rx="5"/>
+  <text class="subtitle" x="405" y="390" text-anchor="middle">Enemy System</text>
+  <line x1="280" y1="400" x2="530" y2="400" stroke="#e53935"/>
+  <text class="text" x="290" y="420">Boss Objects</text>
+  <text class="text" x="300" y="440">├ BossObject / BossGameObject</text>
+  <text class="text" x="300" y="460">├ Boss_1_Object → Boss1Script</text>
+  <text class="text" x="300" y="480">├ Boss_2_Object → Boss2Script</text>
+  <text class="text" x="300" y="500">├ Boss_3_Object → Boss3Script</text>
+  <text class="text" x="300" y="520">└ CutSceneBossObject</text>
+  <text class="text" x="290" y="550">MonsterGameObject</text>
+  <text class="text" x="300" y="570">└ MonsterScript</text>
+  <text class="text" x="290" y="600">Boss Features</text>
+  <text class="text" x="300" y="620">├ Multiple Phases</text>
+  <text class="text" x="300" y="640">├ Pattern System</text>
+  <text class="text" x="300" y="660">└ HP System</text>
+
+  <!-- Weapon Objects -->
+  <rect class="weapon-box" x="560" y="370" width="280" height="320" rx="5"/>
+  <text class="subtitle" x="700" y="390" text-anchor="middle">Weapon System</text>
+  <line x1="560" y1="400" x2="840" y2="400" stroke="#fb8c00"/>
+  <text class="text" x="570" y="420">Base Classes</text>
+  <text class="text" x="580" y="440">├ WeaponObject</text>
+  <text class="text" x="580" y="460">├ WeaponScript</text>
+  <text class="text" x="580" y="480">└ ProjectileWeaponScript</text>
+  <text class="text" x="570" y="510">Enemy Weapons</text>
+  <text class="text" x="580" y="530">├ HomingWeaponObject (유도)</text>
+  <text class="text" x="580" y="550">├ CrossAreaWeaponObject (범위)</text>
+  <text class="text" x="580" y="570">├ FastMissileObject (고속)</text>
+  <text class="text" x="580" y="590">├ SlowMissileObject (저속)</text>
+  <text class="text" x="580" y="610">├ MeteorObject (메테오)</text>
+  <text class="text" x="580" y="630">└ LaserWeaponObject (레이저)</text>
+  <text class="text" x="570" y="660">Weapon Properties</text>
+  <text class="text" x="580" y="680">• Damage, Speed, Pattern</text>
+
+  <!-- UI Objects -->
+  <rect class="ui-box" x="870" y="370" width="280" height="320" rx="5"/>
+  <text class="subtitle" x="1010" y="390" text-anchor="middle">UI System</text>
+  <line x1="870" y1="400" x2="1150" y2="400" stroke="#8e24aa"/>
+  <text class="text" x="880" y="420">HUD Elements</text>
+  <text class="text" x="890" y="440">├ PlayerHPUI</text>
+  <text class="text" x="890" y="460">├ BossHPUI</text>
+  <text class="text" x="890" y="480">├ BossPageUI</text>
+  <text class="text" x="890" y="500">├ BossPhaseUI</text>
+  <text class="text" x="890" y="520">└ CharacterPlayUI</text>
+  <text class="text" x="880" y="550">Interactive UI</text>
+  <text class="text" x="890" y="570">├ ButtonGameObject</text>
+  <text class="text" x="890" y="590">├ CrossHairObject</text>
+  <text class="text" x="890" y="610">└ Various ButtonUI Classes</text>
+  <text class="text" x="880" y="640">Story UI</text>
+  <text class="text" x="890" y="660">├ Dialog Systems</text>
+  <text class="text" x="890" y="680">└ BackgroundUI Classes</text>
+
+  <!-- Effect Objects -->
+  <rect class="ui-box" x="1180" y="370" width="200" height="180" rx="5"/>
+  <text class="subtitle" x="1280" y="390" text-anchor="middle">Effect System</text>
+  <line x1="1180" y1="400" x2="1380" y2="400" stroke="#8e24aa"/>
+  <text class="text" x="1190" y="420">Visual Effects</text>
+  <text class="text" x="1200" y="440">├ FadeInFadeOutObject</text>
+  <text class="text" x="1200" y="460">├ BackGroundScript</text>
+  <text class="text" x="1200" y="480">└ Camera Shake</text>
+  <text class="text" x="1190" y="510">Render Components</text>
+  <text class="text" x="1200" y="530">├ AnimationComponent</text>
+  <text class="text" x="1200" y="550">└ TextureComponent</text>
+
+  <!-- Script Layer Group -->
+  <rect class="group-box" x="20" y="740" width="1560" height="430" rx="10"/>
+  <text class="group-title" x="40" y="765">Script Layer (스크립트 레이어)</text>
+
+  <!-- Base Scripts -->
+  <rect class="script-box" x="50" y="790" width="220" height="160" rx="5"/>
+  <text class="subtitle" x="160" y="810" text-anchor="middle">Base Scripts</text>
+  <line x1="50" y1="820" x2="270" y2="820" stroke="#616161"/>
+  <text class="text" x="60" y="840">ScriptComponent (Abstract)</text>
+  <text class="text" x="60" y="860">├ Start()</text>
+  <text class="text" x="60" y="880">├ Update(deltaTime)</text>
+  <text class="text" x="60" y="900">├ FixedUpdate(fixedDeltaTime)</text>
+  <text class="text" x="60" y="920">├ OnCollisionEnter()</text>
+  <text class="text" x="60" y="940">└ OnCollisionExit()</text>
+
+  <!-- UI Scripts -->
+  <rect class="script-box" x="300" y="790" width="250" height="160" rx="5"/>
+  <text class="subtitle" x="425" y="810" text-anchor="middle">UI Scripts</text>
+  <line x1="300" y1="820" x2="550" y2="820" stroke="#616161"/>
+  <text class="text" x="310" y="840">TextureUIScript</text>
+  <text class="text" x="310" y="860">├ TextTureUIDelayScript</text>
+  <text class="text" x="310" y="880">├ TextTureUILoopScript</text>
+  <text class="text" x="310" y="900">├ TextTureUITutorialScript</text>
+  <text class="text" x="310" y="920">├ TextTureUI_Input_Script</text>
+  <text class="text" x="310" y="940">└ FontScript</text>
+
+  <!-- Game Logic Scripts -->
+  <rect class="script-box" x="580" y="790" width="250" height="160" rx="5"/>
+  <text class="subtitle" x="705" y="810" text-anchor="middle">Game Logic Scripts</text>
+  <line x1="580" y1="820" x2="830" y2="820" stroke="#616161"/>
+  <text class="text" x="590" y="840">Player Logic</text>
+  <text class="text" x="600" y="860">├ Movement</text>
+  <text class="text" x="600" y="880">├ Shooting</text>
+  <text class="text" x="600" y="900">└ Power-ups</text>
+  <text class="text" x="590" y="920">Enemy AI</text>
+  <text class="text" x="600" y="940">└ Pattern System</text>
+
+  <!-- Data Flow -->
+  <rect class="script-box" x="860" y="790" width="250" height="160" rx="5"/>
+  <text class="subtitle" x="985" y="810" text-anchor="middle">Data Management</text>
+  <line x1="860" y1="820" x2="1110" y2="820" stroke="#616161"/>
+  <text class="text" x="870" y="840">Observer Pattern</text>
+  <text class="text" x="880" y="860">├ Player Info</text>
+  <text class="text" x="880" y="880">├ Boss Info</text>
+  <text class="text" x="880" y="900">├ Game State</text>
+  <text class="text" x="880" y="920">└ Scene Transitions</text>
+
+  <!-- Game Flow Diagram -->
+  <rect class="script-box" x="50" y="970" width="1060" height="180" rx="5"/>
+  <text class="subtitle" x="580" y="990" text-anchor="middle">Game Flow (게임 플로우)</text>
+  <line x1="50" y1="1000" x2="1110" y2="1000" stroke="#616161"/>
+  
+  <!-- Flow boxes -->
+  <rect class="scene-box" x="70" y="1020" width="120" height="40" rx="5"/>
+  <text class="text" x="130" y="1045" text-anchor="middle">Start Menu</text>
+  
+  <rect class="scene-box" x="220" y="1020" width="120" height="40" rx="5"/>
+  <text class="text" x="280" y="1045" text-anchor="middle">Story/Tutorial</text>
+  
+  <rect class="scene-box" x="370" y="1020" width="120" height="40" rx="5"/>
+  <text class="text" x="430" y="1045" text-anchor="middle">Gameplay</text>
+  
+  <rect class="scene-box" x="520" y="1020" width="120" height="40" rx="5"/>
+  <text class="text" x="580" y="1045" text-anchor="middle">Boss Battle</text>
+  
+  <rect class="scene-box" x="670" y="1020" width="120" height="40" rx="5"/>
+  <text class="text" x="730" y="1045" text-anchor="middle">Upgrade</text>
+  
+  <rect class="scene-box" x="820" y="1020" width="120" height="40" rx="5"/>
+  <text class="text" x="880" y="1045" text-anchor="middle">Story Progress</text>
+  
+  <rect class="scene-box" x="970" y="1020" width="120" height="40" rx="5"/>
+  <text class="text" x="1030" y="1045" text-anchor="middle">Ending/Credits</text>
+  
+  <!-- Flow arrows -->
+  <path class="arrow" d="M 190 1040 L 220 1040" marker-end="url(#arrowhead)"/>
+  <path class="arrow" d="M 340 1040 L 370 1040" marker-end="url(#arrowhead)"/>
+  <path class="arrow" d="M 490 1040 L 520 1040" marker-end="url(#arrowhead)"/>
+  <path class="arrow" d="M 640 1040 L 670 1040" marker-end="url(#arrowhead)"/>
+  <path class="arrow" d="M 790 1040 L 820 1040" marker-end="url(#arrowhead)"/>
+  <path class="arrow" d="M 940 1040 L 970 1040" marker-end="url(#arrowhead)"/>
+  
+  <!-- Loop back arrow -->
+  <path class="arrow-dashed" d="M 730 1060 Q 730 1100, 430 1100 Q 130 1100, 130 1060" marker-end="url(#arrowhead)"/>
+  <text class="text" x="430" y="1120" text-anchor="middle">Stage Loop</text>
+
+  <!-- Key Features -->
+  <rect class="script-box" x="1140" y="790" width="420" height="360" rx="5"/>
+  <text class="subtitle" x="1350" y="810" text-anchor="middle">Key Features (주요 기능)</text>
+  <line x1="1140" y1="820" x2="1560" y2="820" stroke="#616161"/>
+  
+  <text class="text" x="1150" y="845" font-weight="bold">Combat System</text>
+  <text class="text" x="1160" y="865">• Bullet Hell 패턴</text>
+  <text class="text" x="1160" y="885">• 다양한 무기 타입 (유도, 범위, 레이저 등)</text>
+  <text class="text" x="1160" y="905">• 보스 페이즈 시스템</text>
+  
+  <text class="text" x="1150" y="935" font-weight="bold">Progression System</text>
+  <text class="text" x="1160" y="955">• 업그레이드 시스템 (Shield, Damage, Fire Rate)</text>
+  <text class="text" x="1160" y="975">• 스테이지 진행</text>
+  <text class="text" x="1160" y="995">• 파워업 아이템</text>
+  
+  <text class="text" x="1150" y="1025" font-weight="bold">Story Integration</text>
+  <text class="text" x="1160" y="1045">• 컷씬 시스템</text>
+  <text class="text" x="1160" y="1065">• 대화 시스템</text>
+  <text class="text" x="1160" y="1085">• 음성 나레이션</text>
+  
+  <text class="text" x="1150" y="1115" font-weight="bold">Visual Effects</text>
+  <text class="text" x="1160" y="1135">• 페이드 인/아웃 전환</text>
+
+</svg>
